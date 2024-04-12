@@ -1,3 +1,4 @@
+#include <memory>
 #include <string>
 #include <vector>
 
@@ -15,6 +16,40 @@ public:
     }
 };
 
+class InternalItem {
+public:
+    explicit InternalItem(Item& item);
+    virtual void update() = 0;
+
+    void checkAndIncreaseQuality();
+
+    Item& item;
+};
+
+class GenericItem : public InternalItem {
+public:
+    explicit GenericItem(Item& item);
+    void update() override;
+};
+
+class AgedBrieItem : public InternalItem {
+public:
+    explicit AgedBrieItem(Item& item);
+    void update() override;
+};
+
+class SulfurasItem : public InternalItem {
+public:
+    explicit SulfurasItem(Item& item);
+    void update() override;
+};
+
+class BackstagePassItem : public InternalItem {
+public:
+    explicit BackstagePassItem(Item& item);
+    void update() override;
+};
+
 class GildedRose {
 public:
     explicit GildedRose(std::vector<Item>& items);
@@ -22,5 +57,6 @@ public:
     void updateQuality();
 
 private:
-    std::vector<Item>& items;
+    //    std::vector<Item>& items;
+    std::vector<std::shared_ptr<InternalItem>> internalItems;
 };
