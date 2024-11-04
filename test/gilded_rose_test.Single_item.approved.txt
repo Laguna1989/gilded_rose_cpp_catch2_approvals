@@ -1,0 +1,1 @@
+name: Axe, sellIn: 9, quality: 14
