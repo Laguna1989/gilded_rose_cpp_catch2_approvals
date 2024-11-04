@@ -18,3 +18,13 @@ TEST_CASE("Single item")
 
     ApprovalTests::Approvals::verify(items[0]);
 }
+
+TEST_CASE("Multiple items")
+{
+    std::vector<Item> items {Item{"Axe", 10, 15}, Item{"Backstage passes to a TAFKAL80ETC concert", 10, 15}};
+    GildedRose gildedRose{items};
+
+    gildedRose.updateQuality();
+
+    ApprovalTests::Approvals::verifyAll(items);
+}
