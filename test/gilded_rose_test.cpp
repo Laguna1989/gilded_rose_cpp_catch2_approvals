@@ -1,8 +1,7 @@
 #include "gilded_rose.hpp"
 
 #include <ApprovalTests.hpp>
-#include <catch2/catch_all.hpp>
-#include <utility>
+#include <catch2/catch_test_macros.hpp>
 
 std::ostream& operator<<(std::ostream& os, Item const& obj)
 {
