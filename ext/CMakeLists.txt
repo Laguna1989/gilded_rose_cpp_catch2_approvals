@@ -16,12 +16,12 @@ message(STATUS "Fetching catch2")
 CPMAddPackage(
         NAME catch2
         GITHUB_REPOSITORY catchorg/Catch2
-        GIT_TAG v3.5.0
+        GIT_TAG v3.5.2
 )
 
 message(STATUS "Fetching approvaltests")
 CPMAddPackage(
         NAME approvaltests
         GITHUB_REPOSITORY approvals/ApprovalTests.cpp
-        GIT_TAG master
+        GIT_TAG v.10.13.0
 )
