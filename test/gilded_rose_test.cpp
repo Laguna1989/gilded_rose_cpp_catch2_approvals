@@ -42,7 +42,14 @@ TEST_CASE("full set of combinations")
     };
 
     // clang-format off
-std::vector<std::string> const names = {"Foo", "+5 Dexterity Vest", "Aged Brie", "Elixir of the Mongoose", "Sulfuras, Hand of Ragnaros", "Backstage passes to a TAFKAL80ETC concert"};
+    std::vector<std::string> const names = {
+        "Foo",
+        "+5 Dexterity Vest",
+        "Aged Brie",
+        "Elixir of the Mongoose",
+        "Sulfuras, Hand of Ragnaros",
+        "Backstage passes to a TAFKAL80ETC concert"
+};
     // clang-format on
 
     std::vector<int> sellIns = { -10, -5, -1, 0, 1, 2, 5, 10, 20, 50, 100 };
